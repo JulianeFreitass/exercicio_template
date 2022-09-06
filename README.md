@@ -1,1 +1,1 @@
-# exercicio_template
+# Repositório referente a atividade de template JS
