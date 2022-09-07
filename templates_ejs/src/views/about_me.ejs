@@ -1,0 +1,17 @@
+<%# A linha abaixo carrega no template o conteúdo total do arquivo header.ejs%>
+<%-include('base_header') -%>
+
+
+    <div class="container">
+        <% sobre_mim.forEach(function(sobre_mim) { %>   
+            <div class="card">
+                <img src="https://avatars.githubusercontent.com/u/70216694?v=4" alt="Juliane" style="width:100%">
+                <h1><%=sobre_mim.nome %></h1>
+                <p class="title">Idade: <%=sobre_mim.idade %> anos</p>
+                <p class="title">Formação: <%=sobre_mim.formacao %></p>
+                <p class="title">E-mail: <%=sobre_mim.contato %></p>
+                <p><a class="button" href="mailto:juliane.freitas55@gmail.com">Contatar</a></p>
+            </div>
+            <% }); %>
+    </div>
+    <%- include('base_footer') -%>

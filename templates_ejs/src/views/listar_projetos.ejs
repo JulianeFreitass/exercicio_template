@@ -1,0 +1,16 @@
+<%# A linha abaixo carrega no template o conteúdo total do arquivo header.ejs%>
+<%-include('base_header') -%>
+
+<div class="row">
+    <% for(var i=0; i< lista_projetos.length; ++i) { %>  
+    <div class="card-project red">
+      <h2><%=lista_projetos[i].projeto %></h2>
+      <p>Inicio: <%=lista_projetos[i].inicio %></p>
+      <p>Fim: <%=lista_projetos[i].fim %></p>
+    </div>
+    <% } %>
+</div>
+
+
+<%# A linha abaixo carrega no template o conteúdo total do arquivo footer.ejs %>
+<%- include('base_footer') -%>
