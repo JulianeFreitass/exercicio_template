@@ -3,15 +3,15 @@
 
 
     <div class="container">
-        <% sobre_mim.forEach(function(sobre_mim) { %>   
+        <% for(var i=0; i< sobre_mim.length; ++i) { %>  
             <div class="card">
                 <img src="https://avatars.githubusercontent.com/u/70216694?v=4" alt="Juliane" style="width:100%">
-                <h1><%=sobre_mim.nome %></h1>
-                <p class="title">Idade: <%=sobre_mim.idade %> anos</p>
-                <p class="title">Formação: <%=sobre_mim.formacao %></p>
-                <p class="title">E-mail: <%=sobre_mim.contato %></p>
+                <h1><%=sobre_mim[i].nome %></h1>
+                <p class="title">Idade: <%=sobre_mim[i].idade %> anos</p>
+                <p class="title">Formação: <%=sobre_mim[i].formacao %></p>
+                <p class="title">E-mail: <%=sobre_mim[i].contato %></p>
                 <p><a class="button" href="mailto:juliane.freitas55@gmail.com">Contatar</a></p>
             </div>
-            <% }); %>
+            <% } %>
     </div>
     <%- include('base_footer') -%>

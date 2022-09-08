@@ -8,11 +8,11 @@ class Projeto{
 }
 
 class Usuario{
-    constructor(nome, idade, contato, formacao){
+    constructor(nome, idade, formacao, contato){
         this.nome = nome;
         this.idade = idade;
-        this.contato = contato;
         this.formacao = formacao;
+        this.contato = contato;
 
     }
 }

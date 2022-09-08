@@ -42,16 +42,10 @@ function listProjectHandler(req, res){
 
 function listAboutMe(req, res){
      /* Os dados a seguir, em uma aplicação real, deveriam vir de um BD */
-     var usuario = [
-        { 
-            nome: 'Juliane Freitas', 
-            idade: 23,
-            formacao: "Analise e desenvolvimento de Sistemas", 
-            contato: "Juliane.freitas55@gmail.com"
-        }
-    ];
-
-    res.render('about_me.ejs', {sobre_mim: usuario});    
+     let usuario = new Usuario("Juliane Freitas", 23, "Analise e desenvolvimento de sistemas", "Juliane.freitas55@gmail.com");     
+     let usuarios = [];
+     usuarios.push(usuario);
+    res.render('about_me.ejs', {sobre_mim: usuarios});    
 }
 
 function listenHandler(){
